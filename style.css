@@ -1,0 +1,155 @@
+/* ===== base ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+  }
+  
+  /* ===== header and nav ===== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: black;
+  }
+  
+  header h1 {
+    color: red;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: red;
+  }
+  
+  /* ===== hero ===== */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #111, #1a1a1a);
+  }
+  
+  .hero button {
+    background: red;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero button:hover {
+    background: darkred;
+  }
+  
+  /* ===== movie section  ===== */
+  .movies {
+    padding: 40px 20px;
+  }
+  
+  /* Flexbox desktop */
+  .movie-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* ===== movie cards ===== */
+  .movie-card {
+    background: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive images  */
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* Buttons */
+  .movie-card button {
+    background: red;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .movie-card button:hover {
+    background: darkred;
+  }
+  
+  /* ===== aabout and contacts ===== */
+  .about, .contact {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* ===== footer ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: gray;
+  }
+  
+  /* ===== media query under 768px ==== */
+  @media (max-width: 768px) {
+  
+    /* stack nav vertically */
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* stack movie cards */
+    .movie-container {
+      flex-direction: column;
+    }
+  
+    /* adjusting spacing */
+    body {
+      font-size: 14px;
+    }
+  
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  /* ===== small mboiles ===== */
+  @media (max-width: 480px) {
+  
+    .hero {
+      padding: 50px 10px;
+    }
+  
+    .movie-card {
+      font-size: 14px;
+    }
+  }
